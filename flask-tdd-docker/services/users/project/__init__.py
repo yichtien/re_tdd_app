@@ -34,4 +34,4 @@ class Ping(Resource):
         return jsonify({'status': 'success', 'message': 'pong!'})
 
 
-api.add_resource(Ping, '/ping')
+api.add_resource(Ping, '/users/ping')
