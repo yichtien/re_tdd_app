@@ -1,10 +1,11 @@
 # services/users/project/api/users.py
 
 from flask import Blueprint
-from flask_restful import Resource, Api 
+from flask_restplus import Resource, Api
 
 users_blueprint = Blueprint('users', __name__)
 api = Api(users_blueprint)
+
 
 class UsersPing(Resource):
     def get(self):
@@ -12,5 +13,6 @@ class UsersPing(Resource):
             'status': 'success',
             'message': 'pong!'
         }
+
 
 api.add_resource(UsersPing, '/users/ping')
